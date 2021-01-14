@@ -1,0 +1,11 @@
+.photo {
+    max-height: 250px;
+    max-width: 250px;
+    padding-top: 10px;
+    object-fit: scale-down;
+}
+
+.contenedor {
+    width: 350px;
+    height: 560px;
+}
