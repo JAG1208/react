@@ -15,17 +15,18 @@ const Birra = ({abv,description,first_brewed,ibu,id,image_url,name,tagline,food_
             <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
 
                <Card className="contenedor"> 
-                <Card.Header style={{backgroundColor:'#f88f01',textAlign:"center",color:"#fff"}}>{name}</Card.Header>
-                <Card.Img variant={"top"} src={image_url} className="photo"></Card.Img>
+                <Card.Header style={{backgroundColor:'#f88f01',textAlign:"center",color:"#fff",fontSize:"18px",fontWeight:"700"}}>{name}</Card.Header>
+                <Card.Img variant={"top"} src={image_url} className="mx-auto  w-50 d-block img-fluid photo"></Card.Img>
                 
                 <Card.Body>
-                    <Card.Title>{tagline}</Card.Title>
+                    <Card.Title style={{color:"#f88f01",textAlign:"center",marginTop:"30px"}}>{tagline}</Card.Title>
 
-                    <Card.Title>Fecha de lanzamiento: {first_brewed}</Card.Title>
+                    <Card.Title>
+                        Fecha de lanzamiento: {first_brewed}</Card.Title>
                 </Card.Body>
                 <Card.Footer style={{backgroundColor:'#f88f01'}}>
-                        <Button  variant="link" onClick={handleClick} size="sm"><FontAwesomeIcon icon={faReplyAll} size="2x" color="white"/>
-</Button>
+                  <Button  variant='link' onClick={handleClick} style={{textDecoration:"none",color:"white" ,textAlign:"center" ,fontSize:"18px",fontWeight:"700" }} className="btn d-block w-100">+Info</Button>
+                        
                 </Card.Footer>
             </Card> 
             <Card className="contenedor">
@@ -42,7 +43,7 @@ const Birra = ({abv,description,first_brewed,ibu,id,image_url,name,tagline,food_
                     
                 </Card.Body>
                 <Card.Footer style={{backgroundColor:'#f88f01'}}>
-                        <Button  variant='link' onClick={handleClick} size="sm"><FontAwesomeIcon icon={faReplyAll} size="2x" color="white"  /></Button>
+                        <Button  variant='link' onClick={handleClick} size="sm" ><FontAwesomeIcon icon={faReplyAll} size="2x" color="white"  /></Button>
                 </Card.Footer>
             </Card> 
             </ReactCardFlip>
