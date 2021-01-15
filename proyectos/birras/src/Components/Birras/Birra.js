@@ -21,8 +21,8 @@ const Birra = ({abv,description,first_brewed,ibu,id,image_url,name,tagline,food_
                 <Card.Body>
                     <Card.Title style={{color:"#f88f01",textAlign:"center",marginTop:"30px"}}>{tagline}</Card.Title>
 
-                    <Card.Title>
-                        Fecha de lanzamiento: {first_brewed}</Card.Title>
+                    <Card.Title style={{marginTop:"30px", color:"#989c99"}}>
+                        Primera eleboracion: {first_brewed}</Card.Title>
                 </Card.Body>
                 <Card.Footer style={{backgroundColor:'#f88f01'}}>
                   <Button  variant='link' onClick={handleClick} style={{textDecoration:"none",color:"white" ,textAlign:"center" ,fontSize:"18px",fontWeight:"700" }} className="btn d-block w-100">+Info</Button>
@@ -35,10 +35,17 @@ const Birra = ({abv,description,first_brewed,ibu,id,image_url,name,tagline,food_
                 <Card.Body>
                 
                     <Card.Text>
-                        <p>DESCRIPTION: {description}</p>
-                        <p>  %Alcohol: {abv}     IBU: {ibu}</p>
+                      <p style={{fontSize:"14px"}} > <span style={{fontWeight:"bold"}}> DESCRIPTION: </span>  {description}</p>
+                        <table>
+                            <tr>
+                                <td style={{fontWeight:"bold",fontSize:"14px"}}>%ALCOHOL:</td>
+                                <td style={{paddingRight:"50px",paddingLeft:"10px"}}>{abv}</td>
+                                <td style={{fontWeight:"bold",fontSize:"14px"}}>IBU:</td>
+                                <td style={{paddingLeft:"10px",fontSize:"14px"}}>{ibu}</td>
+                            </tr>
+                        </table>
                     
-                        <p>Food pairing: {food_pairing}</p>
+                        <p style={{fontSize:"14px"}}><span style={{fontWeight:"bold"}}>Food pairing: </span>{food_pairing}</p>
                     </Card.Text>
                     
                 </Card.Body>
